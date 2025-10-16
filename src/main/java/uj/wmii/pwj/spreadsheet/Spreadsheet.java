@@ -149,35 +149,4 @@ public class Spreadsheet {
         public int second;
         public Pair(int first, int second) {this.first = first; this.second = second;}
     }
-
-
-
-    // FOR DEBUGGING //
-    public static void main(String[] args) {
-        String[][] sheet = new String[3][3];
-
-        sheet[0][0] = "A";
-        sheet[0][1] = "B";
-        sheet[0][2] = "C";
-        sheet[1][0] = "D";
-        sheet[1][1] = "E";
-        sheet[1][2] = "F";
-        sheet[2][0] = "G";
-        sheet[2][1] = "H";
-        sheet[2][2] = "I";
-
-        Spreadsheet spreadsheet = new Spreadsheet();
-        sheet = spreadsheet.calculate(sheet);
-
-        spreadsheet.Print(sheet);
-    }
-
-    private void Print(String[][] matrix) {
-        for (String[] row : matrix) {
-            for (String cell : row) {
-                System.out.print(cell + " ");
-            }
-            System.out.println();
-        }
-    }
 }
